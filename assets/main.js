@@ -48,7 +48,7 @@ const navObserver = new IntersectionObserver(
       }
     });
   },
-  { rootMargin: "-45% 0px -45% 0px", threshold: 0.1 }
+  { rootMargin: "-20% 0px -55% 0px", threshold: 0.1 }
 );
 
 sections.forEach((section) => navObserver.observe(section));
@@ -72,4 +72,20 @@ document.querySelectorAll(".timeline-item").forEach((item) => {
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
+}
+
+// --- Theme toggle ---
+const rootEl = document.documentElement;
+const themeToggle = document.getElementById("theme-toggle");
+
+const savedTheme = localStorage.getItem("theme");
+const shouldUseDark = savedTheme ? savedTheme === "dark" : true;
+
+rootEl.classList.toggle("dark", shouldUseDark);
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isDark = rootEl.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
 }

@@ -1,9 +1,11 @@
 /* ========= DESIGN TOKENS ========= */
 
-:root {
+:root.dark {
   --bg-main: #050816;
-  --bg-topbar: #111827;
+  --bg-topbar: rgba(15, 23, 42, 0.96);
   --bg-card: rgba(15, 23, 42, 0.96);
+  --body-bg: radial-gradient(circle at top left, #0f172a 0, #020617 40%),
+    radial-gradient(circle at bottom right, #111827 0, #020617 45%), #020617;
   --accent: #4f46e5;
   --accent-soft: rgba(79, 70, 229, 0.18);
   --text-main: #f9fafb;
@@ -14,6 +16,62 @@
   --radius-pill: 999px;
   --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.95);
   --max-width: 1120px;
+}
+
+:root {
+  /* === Backgrounds with subtle gradient === */
+  --body-bg: linear-gradient(135deg, #eef1f6 0%, #e5e8ee 35%, #f0f2f7 100%);
+
+  --bg-main: rgba(240, 242, 247, 0);
+  --bg-topbar: rgba(248, 250, 253, 0.65);
+  --bg-card: rgba(255, 255, 255, 0.6);
+
+  /* === Accent Colors === */
+  --accent: #4f46e5;
+  --accent-soft: rgba(79, 70, 229, 0.12);
+
+  /* === Text Colors === */
+  --text-main: #1f2733;
+  --text-muted: #6e7380;
+
+  /* === Borders & Shadows === */
+  --border-subtle: rgba(120, 130, 150, 0.22);
+  --shadow-soft: 0 14px 32px rgba(20, 25, 38, 0.08);
+
+  /* === Radius & Layout === */
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --max-width: 1120px;
+}
+
+.section,
+.hero-card,
+.project-card,
+.about-card,
+.impact-card,
+.contact-card {
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(148, 163, 184, 0.18);
+  opacity: 0.9;
 }
 
 /* ========= RESET & GLOBAL ========= */
@@ -38,13 +96,12 @@ html {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background: radial-gradient(circle at top left, #0f172a 0, #020617 40%),
-    radial-gradient(circle at bottom right, #111827 0, #020617 45%), #020617;
+  background: var(--body-bg);
   color: var(--text-main);
   line-height: 1.5;
+  padding-top: 72px;
 }
 
-/* 链接统一风格 */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -56,12 +113,15 @@ a:hover {
 /* ========= LAYOUT: NAV ========= */
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 20;
-  background: rgba(15, 23, 42, 0.96);
-  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+  background: var(--bg-topbar);
+  border-bottom: 1px solid var(--border-subtle);
   backdrop-filter: blur(18px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
 }
 
 .nav {
@@ -85,6 +145,7 @@ a:hover {
   list-style: none;
   display: flex;
   gap: 1.75rem;
+  margin-left: 30rem;
 }
 
 .nav-links a {
@@ -111,6 +172,21 @@ a:hover {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  opacity: 0.7;
 }
 
 /* ========= LAYOUT: SECTIONS ========= */
@@ -210,11 +286,11 @@ section[id] {
   align-items: center;
   gap: 6px;
   padding: 8px 12px;
-  background: #020617;
+  background: var(--bg-card);
   border-radius: 999px;
   border: 1px solid var(--border-subtle);
   font-size: 12px;
-  color: #e5e7eb;
+  color: var(--text-main);
   text-decoration: none;
   transition: 0.2s;
 }
@@ -297,12 +373,13 @@ section[id] {
 
 .hero-right {
   display: flex;
-  align-items: center;
+  align-items: fix-start;
   justify-content: center;
+  margin-top: -25px;
 }
 
 .hero-card {
-  background: radial-gradient(circle at top left, #1d2448, #020617 70%);
+  background: var(--bg-card);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-subtle);
   padding: 2.2rem 2.4rem;
@@ -319,6 +396,10 @@ section[id] {
   font-size: 0.96rem;
   color: var(--text-muted);
   line-height: 1.7;
+}
+
+:root.dark .hero-card {
+  background: radial-gradient(circle at top left, #1d2448, #020617 70%);
 }
 
 /* ========= GENERIC SECTION STYLES (Skills/Projects/About/Contact) ========= */
@@ -357,11 +438,11 @@ section[id] {
 }
 
 .impact-card {
-  border: 1px solid rgba(99, 102, 241, 0.35);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: 1.4rem 1.6rem;
-  background: rgba(15, 23, 42, 0.9);
-  box-shadow: 0 14px 35px rgba(3, 7, 18, 0.45);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -400,7 +481,7 @@ section[id] {
 .card-metrics li {
   padding: 1rem 1.1rem;
   border-radius: var(--radius-lg);
-  background: rgba(15, 23, 42, 0.7);
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
 }
 
@@ -417,7 +498,7 @@ section[id] {
 }
 
 .highlight-card {
-  background: rgba(15, 23, 42, 0.9);
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: 2rem;
@@ -439,8 +520,8 @@ section[id] {
 .skill-tag {
   padding: 0.45rem 0.9rem;
   border-radius: var(--radius-pill);
-  background: rgba(79, 70, 229, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: var(--accent-soft);
+  border: 1px solid rgba(99, 102, 241, 0.25);
   font-size: 0.85rem;
 }
 
@@ -498,10 +579,10 @@ section[id] {
 
 .project-card {
   background: var(--bg-card);
-  border: 1px solid rgba(59, 70, 100, 0.4);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: 1.8rem;
-  box-shadow: 0 14px 40px rgba(2, 6, 23, 0.65);
+  box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -568,7 +649,7 @@ section[id] {
 }
 
 .about-card {
-  background: rgba(15, 23, 42, 0.92);
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.6rem;
@@ -617,14 +698,14 @@ section[id] {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: rgba(99, 102, 241, 0.4);
+  background: var(--border-subtle);
 }
 
 .timeline-item {
   padding: 1.25rem 1.5rem 1.25rem 2.5rem;
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
-  background: rgba(7, 11, 30, 0.9);
+  background: var(--bg-card);
   position: relative;
   opacity: 0.65;
   transform: translateY(18px);
@@ -689,7 +770,7 @@ section[id] {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: 1.5rem;
-  background: rgba(8, 13, 32, 0.9);
+  background: var(--bg-card);
   transition: transform 0.3s ease, border-color 0.3s ease;
   text-align: center;
   display: flex;
