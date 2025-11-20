@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scott · Cloud & DevOps Portfolio</title>
+    <meta
+      name="description"
+      content="Scott Yang · Cloud Support / DevOps Engineer"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#home" class="nav-logo">Scott Yang</a>
+        <ul class="nav-links">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <div class="hero-left">
+            <div class="hero-top">
+              <div class="avatar-wrapper">
+                <img
+                  src="./files/scott-yang-profile.png"
+                  alt="Scott Profile Photo"
+                  class="avatar-img"
+                />
+              </div>
+              <div class="hero-title-block">
+                <h1>Hello, I'm Scott</h1>
+                <p class="hero-location">Based in Auckland, New Zealand</p>
+                <p class="hero-location hero-availability">
+                  Open to Cloud Support / DevOps / Technical Support roles
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-social icons">
+              <a
+                href="https://github.com/soliscottude"
+                target="_blank"
+                aria-label="GitHub"
+                class="social-pill"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.4 2.3 2.8 2.3 2.8 0 3.2-.5 3.2-2.6V18c-3.3.6-5.3-1-5.3-4.1 0-.9.3-1.7.9-2.4-.1-.2-.4-1.2.1-2.5 0 0 .8-.2 2.5 1 .8-.2 1.6-.4 2.5-.4s1.7.1 2.5.4c1.6-1.1 2.5-1 2.5-1 .5 1.3.2 2.3.1 2.5.6.6.9 1.5.9 2.4 0 3.1-2 4.7-5.3 4.1v1.7c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z"
+                  />
+                </svg>
+                <span>GitHub</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/scottyangnz"
+                target="_blank"
+                aria-label="LinkedIn"
+                class="social-pill"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3V22h-3V8.5zm7.5 0h2.9v1.8h.1c.4-.7 1.5-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.4V22h-3v-6.2c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V22h-3V8.5z"
+                  />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a
+                href="https://hub.docker.com/u/soliscottude"
+                target="_blank"
+                aria-label="Docker Hub"
+                class="social-pill"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M21.8 11.1c-.3-.2-1.5-.2-2-.2-.2-1.3-.8-2.4-1.8-3.2l-.5-.4-.4.5c-.5.7-.7 1.7-.6 2.6-1.2.3-2.3.3-3.3.2H3.2l-.3.6c-.3.7-.5 1.5-.5 2.3 0 3.2 2.6 5.8 5.8 5.8h4.5c3.4 0 6.2-2.3 6.8-5.6.7-.1 1.6-.6 1.9-1.2.3-.7.3-1.4-.1-1.9zM8.5 6h2.2V8.2H8.5V6zm0 2.9h2.2v2.2H8.5V8.9zm-2.8 0H7.9v2.2H5.7V8.9zM8.5 11.8h2.2v2.2H8.5v-2.2zm-2.8 0H7.9v2.2H5.7v-2.2zm5.6-5.8h2.2V8.2h-2.2V6zm0 2.9h2.2v2.2h-2.2V8.9zm0 2.9h2.2v2.2h-2.2v-2.2zm2.8-5.8h2.2V8.2h-2.2V6z"
+                  />
+                </svg>
+                <span>Docker Hub</span>
+              </a>
+
+              <a
+                href="mailto:scogranger@gmail.com"
+                aria-label="Email"
+                class="social-pill"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M12 13 2 6.76V18h20V6.76L12 13zm10-9H2l10 6.25L22 4z"
+                  />
+                </svg>
+                <span>Email</span>
+              </a>
+
+              <a
+                href="./files/Scott Yang CV.pdf"
+                target="_blank"
+                download
+                aria-label="Download CV"
+                class="social-pill cv"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm-8 2h16v2H4v-2z" />
+                </svg>
+                <span>CV</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <article class="hero-card">
+              <h3 class="hero-card-title">Professional Summary</h3>
+              <p class="hero-card-text">
+                Technical Support Specialist with experience in SaaS platforms,
+                cloud migration operations, and automation-focused learning
+                projects. I bring clarity, structure, and calm problem-solving
+                to fast-moving environments, with growing expertise in AWS,
+                DevOps tooling, and system automation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section impact-section">
+        <div class="impact-grid">
+          <article class="impact-card">
+            <p class="impact-label">Cloud Projects</p>
+            <p class="impact-value">3</p>
+            <p class="impact-detail">
+              AWS-focused portfolio projects (automation, serverless,
+              self-healing).
+            </p>
+          </article>
+          <article class="impact-card">
+            <p class="impact-label">Migration Cases</p>
+            <p class="impact-value">3,000+</p>
+            <p class="impact-detail">
+              Customer migration & tenant cases supported at Workday.
+            </p>
+          </article>
+          <article class="impact-card">
+            <p class="impact-label">Documentation</p>
+            <p class="impact-value">30%</p>
+            <p class="impact-detail">
+              Follow-up time reduction through clearer templates and guides.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <p class="section-subtitle">Skill Stack</p>
+        <h2>Technical Skills</h2>
+        <p class="section-description">
+          A blend of cloud engineering, automation, SaaS operations, and DevOps
+          tooling.
+        </p>
+
+        <article class="highlight-card">
+          <div>
+            <p class="highlight-title">Core Technologies</p>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS (EC2, S3, Lambda, DynamoDB)</span>
+              <span class="skill-tag">API Gateway</span>
+              <span class="skill-tag">CloudFront / CloudWatch</span>
+              <span class="skill-tag">Python (boto3)</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Docker / CI/CD</span>
+              <span class="skill-tag">HTML/CSS/JS</span>
+              <span class="skill-tag">Salesforce / Jira / Microsoft 365</span>
+              <span class="skill-tag">macOS / Linux / Windows</span>
+            </div>
+          </div>
+
+          <div class="skill-columns">
+            <div>
+              <p class="highlight-title">What I Focus On</p>
+              <ul class="focus-list">
+                <li>Managing high-volume queues with clear SLA tracking.</li>
+                <li>
+                  Coordinating cloud migration timelines and customer
+                  communication.
+                </li>
+                <li>
+                  Writing templates and documentation that reduce follow-up
+                  work.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="highlight-title">Recent Highlights</p>
+              <ul class="focus-list">
+                <li>
+                  Created and maintained migration templates, reducing follow-up
+                  time by 30%.
+                </li>
+                <li>
+                  Handled 70–100 customer cases per day while staying within 24h
+                  response SLAs.
+                </li>
+                <li>
+                  Started building AWS automation and serverless projects for
+                  Cloud Support / DevOps roles.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="highlight-metrics">
+            <div>
+              <p class="metric-value">3,000+</p>
+              <p class="metric-label">Migration Cases Managed</p>
+            </div>
+            <div>
+              <p class="metric-value">24h</p>
+              <p class="metric-label">Target Response Time</p>
+            </div>
+            <div>
+              <p class="metric-value">3</p>
+              <p class="metric-label">AWS portfolio projects live</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" class="section">
+        <p class="section-subtitle">Experience</p>
+        <h2>How I Work</h2>
+        <p class="section-description">
+          I specialise in keeping complex work organised: managing queues,
+          maintaining SLAs, coordinating with multiple teams, and documenting
+          repeatable processes. Recently, I’ve been pairing this with hands-on
+          AWS and automation learning.
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-item is-visible">
+            <div class="timeline-meta">
+              <p class="timeline-company">Workday · Technical Support</p>
+              <p class="timeline-date">May 2024 – Nov 2025 · Auckland</p>
+            </div>
+            <h3>Technical Support Specialist – Cloud Migration</h3>
+            <ul>
+              <li>
+                Created and managed 3,000+ migration and tenant cases across
+                APAC, EU, UK and NA regions, guiding customers from preparation
+                to go-live.
+              </li>
+              <li>
+                Maintained a high-volume migration campaign workload, handling
+                70–100 customer cases per day and ensuring all inquiries
+                received a response within 24 hours.
+              </li>
+              <li>
+                Coordinated with Engineering, Legal and Product teams to resolve
+                complex issues and maintain compliance with timelines.
+              </li>
+              <li>
+                Developed and maintained templates and documentation, reducing
+                follow-up time by 30% and keeping records audit-ready.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item is-visible">
+            <div class="timeline-meta">
+              <p class="timeline-company">Sevenpoke · Hospitality</p>
+              <p class="timeline-date">Oct 2023 – Apr 2024 · Auckland</p>
+            </div>
+            <h3>Kitchen Supervisor</h3>
+            <ul>
+              <li>
+                Supervised daily kitchen operations and a team of five, ensuring
+                quality and consistency during peak hours.
+              </li>
+              <li>
+                Built strong organisation and communication skills later applied
+                to technical support and incident coordination.
+              </li>
+              <li>
+                Trained and mentored staff on processes, safety, and equipment
+                usage.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item is-visible">
+            <div class="timeline-meta">
+              <p class="timeline-company">
+                Auckland University of Technology (AUT)
+              </p>
+              <p class="timeline-date">2019 – 2022 · Auckland</p>
+            </div>
+            <h3>Bachelor of Computer and Information Sciences</h3>
+            <ul>
+              <li>
+                Studied software development, database design, web development
+                and IT project management.
+              </li>
+              <li>
+                Built foundations in problem solving, systems thinking and
+                technical operations.
+              </li>
+              <li>
+                Now extending this background into cloud engineering and
+                automation.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <p class="section-subtitle">Selected Projects</p>
+        <h2>Cloud & DevOps Projects</h2>
+        <p class="section-description">
+          A collection of AWS automation, serverless applications, and
+          infrastructure workflows built as part of my Cloud Support / DevOps
+          learning path.
+        </p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-pill">Automation · AWS</span>
+            <h3>AWS Cloud Automation Toolkit</h3>
+            <p>
+              Python-based automation toolkit for EC2/S3, Dockerized and
+              integrated with GitHub Actions CI/CD and CloudWatch logs.
+            </p>
+            <ul class="project-meta">
+              <li>Python (boto3)</li>
+              <li>Docker</li>
+              <li>CloudWatch</li>
+              <li>S3 · EC2</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/soliscottude/aws-cloud-automation-portfolio"
+                class="btn-text"
+                >GitHub</a
+              >
+              <a
+                href="https://hub.docker.com/r/soliscottude/aws-automation"
+                class="btn-text"
+                >Docker Hub</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="project-pill">Serverless · Full Stack</span>
+            <h3>Serverless Notes App</h3>
+            <p>
+              Fully serverless notes platform using Lambda, API Gateway,
+              DynamoDB, S3, and CloudFront, automated via GitHub Actions.
+            </p>
+            <ul class="project-meta">
+              <li>Lambda</li>
+              <li>DynamoDB</li>
+              <li>API Gateway</li>
+              <li>CloudFront</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://dipmx1tgj1dm8.cloudfront.net" class="btn-text"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/soliscottude/serverless-notes-app"
+                class="btn-text"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="project-pill">Monitoring · Automation</span>
+            <h3>EC2 Self-Healing System</h3>
+            <p>
+              Automated EC2 recovery workflow using CloudWatch Alarms, SNS, and
+              Lambda with structured S3 logging and conditional reboot logic.
+            </p>
+            <ul class="project-meta">
+              <li>CloudWatch</li>
+              <li>SNS</li>
+              <li>Lambda (Python)</li>
+              <li>EC2</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/soliscottude/ec2-self-healing-demo"
+                class="btn-text"
+                >GitHub</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <p class="section-subtitle">About</p>
+        <h2>About Me</h2>
+        <p class="section-description">
+          I have a background in SaaS support, cloud migration work, and
+          queue-based technical operations. My focus is on clear documentation,
+          structured workflows, and reliable execution. I am currently expanding
+          my skills in AWS, automation, and DevOps practices to support
+          cloud-driven environments.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Technical Support & Operations</h3>
+            <p>
+              Experience managing high-volume SaaS queues, tenant operations,
+              and SLA-driven case handling across global regions.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>Cloud & Automation</h3>
+            <p>
+              Hands-on with AWS services, Python automation, serverless
+              workflows, and CI/CD pipelines to support cloud operations and
+              reduce manual work.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>Collaboration & Documentation</h3>
+            <p>
+              Strong coordination experience with Engineering, Product, and
+              Legal teams, supported by clear documentation and process
+              consistency.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <p class="section-subtitle">Contact</p>
+        <h2>Contact</h2>
+        <p class="section-description">
+          For roles in Cloud Support, DevOps, or Technical Support, please use
+          the contact details below. I am available for opportunities in New
+          Zealand or remote-friendly positions.
+        </p>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <p class="contact-label">Email</p>
+            <a href="mailto:scogranger@gmail.com" class="contact-value">
+              scogranger@gmail.com
+            </a>
+            <p class="contact-note">Primary contact method</p>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-label">LinkedIn</p>
+            <a
+              href="https://www.linkedin.com/in/scottyangnz"
+              class="contact-value"
+            >
+              linkedin.com/in/scottyangnz
+            </a>
+            <p class="contact-note">Professional profile</p>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-label">Resume</p>
+            <a
+              href="./files/Scott Yang CV.pdf"
+              class="contact-value"
+              target="_blank"
+              rel="noreferrer"
+              >Download PDF</a
+            >
+            <p class="contact-note">Most recent CV</p>
+          </article>
+
+          <article class="contact-card availability">
+            <p class="contact-label">Status</p>
+            <p class="contact-value">Actively seeking opportunities</p>
+            <p class="contact-note">
+              Cloud Support · DevOps · Technical Support
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © <span id="year"></span> Scott Yang · Cloud Support & DevOps Portfolio
+    </footer>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
