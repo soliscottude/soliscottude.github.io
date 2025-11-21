@@ -16,6 +16,10 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
         block: "start",
       });
     }
+    const navLinksContainer = document.querySelector(".nav-links");
+    if (navLinksContainer && window.innerWidth <= 640) {
+      navLinksContainer.classList.remove("nav-open");
+    }
   });
 });
 
@@ -87,5 +91,14 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const isDark = rootEl.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+}
+
+const navToggle = document.getElementById("nav-toggle");
+const navLinksContainer = document.querySelector(".nav-links");
+
+if (navToggle && navLinksContainer) {
+  navToggle.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("nav-open");
   });
 }
