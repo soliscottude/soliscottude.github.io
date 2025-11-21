@@ -4,6 +4,7 @@
   --bg-main: #050816;
   --bg-topbar: rgba(15, 23, 42, 0.96);
   --bg-card: rgba(15, 23, 42, 0.96);
+  --bg-card-hover: rgba(15, 23, 42, 1);
 
   --body-bg: radial-gradient(circle at top left, #020617 0, #020617 40%),
     radial-gradient(circle at bottom right, #020617 0, #020617 45%), #020617;
@@ -30,6 +31,7 @@
   --bg-main: rgba(243, 244, 246, 0.9);
   --bg-topbar: rgba(243, 244, 246, 0.95);
   --bg-card: rgba(249, 250, 251, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
 
   --accent: #4f46e5;
   --accent-soft: rgba(79, 70, 229, 0.14);
@@ -640,6 +642,7 @@ section[id] {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-height: 260px;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -647,7 +650,7 @@ section[id] {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
   border-color: rgba(79, 70, 229, 0.4);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bg-card-hover);
 }
 
 .project-pill {
@@ -676,17 +679,28 @@ section[id] {
   box-shadow: 0 25px 60px rgba(5, 8, 22, 0.65);
 }
 
+.project-footer {
+  border-top: 1px solid var(--border-subtle);
+
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
 .project-meta {
+  margin-bottom: 1rem;
   list-style: none;
-  display: flex;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.4rem 1rem;
   flex-wrap: wrap;
   padding: 0;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
+  opacity: 0.7;
 }
 
 .project-links {
+  padding-top: 1rem;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
@@ -739,7 +753,7 @@ section[id] {
 .about-card:hover {
   border-color: rgba(79, 70, 229, 0.4);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bg-card-hover);
   transform: translateY(-4px);
 }
 
@@ -873,6 +887,7 @@ section[id] {
 .contact-card:hover {
   border-color: rgba(79, 70, 229, 0.45);
   transform: translateY(-4px);
+  background: var(--bg-card-hover);
 }
 
 .contact-cta {
