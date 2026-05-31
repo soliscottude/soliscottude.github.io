@@ -909,6 +909,8 @@ section[id] {
   font-size: 0.92rem;
   line-height: 1.65;
   overflow-wrap: anywhere;
+  padding-left: 1.6rem;
+  text-indent: -1.6rem;
 }
 
 .about-grid {
@@ -1227,25 +1229,49 @@ section[id] {
 
 @media print {
   body {
-    background: #fff !important;
-    color: #111827 !important;
     padding-top: 0;
   }
 
   .site-header {
-    display: none !important;
+    position: static;
+    transform: none !important;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+  }
+
+  .nav {
+    max-width: var(--max-width);
+  }
+
+  .nav-right {
+    display: flex;
   }
 
   .section,
   .hero-section,
   .article-hero,
   .article-shell {
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
+    break-inside: auto;
   }
 
   .article-hero {
     padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .article-hero h1 {
+    margin-bottom: 0.6rem;
+  }
+
+  .blog-card,
+  .project-card,
+  .about-card,
+  .impact-card,
+  .contact-card {
+    break-inside: avoid;
+  }
+
+  .article-panel {
+    break-inside: auto;
   }
 }
