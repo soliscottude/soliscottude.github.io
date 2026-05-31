@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog · Scott Yang</title>
+    <meta
+      name="description"
+      content="Scott Yang's blog on technology, responsible leadership, and work."
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="../index.html#home" class="nav-logo">Scott Yang</a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#blog" class="active">Blog</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section blog-list-section">
+        <p class="section-subtitle">Writing</p>
+        <h2>Blog</h2>
+        <p class="section-description">
+          Essays and notes on technology, work, responsible leadership, and
+          early-career opportunity.
+        </p>
+
+        <div class="blog-grid">
+          <article class="blog-card featured">
+            <div class="blog-card-top">
+              <span class="project-pill">Responsible Leadership</span>
+              <p class="blog-date">May 2026</p>
+            </div>
+            <h3>When Work Loses Its Meaning</h3>
+            <p>
+              AI, leadership, and the future of young workers in New Zealand.
+              A personal reflection on entry-level opportunity, responsible AI,
+              and what leaders owe the people affected by technological change.
+            </p>
+            <div class="blog-actions">
+              <a href="./when-work-loses-meaning.html" class="btn-text">
+                Read Blog
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © <span id="year"></span> Scott Yang · Cloud Support & DevOps Portfolio
+    </footer>
+
+    <script src="../assets/main.js"></script>
+  </body>
+</html>
