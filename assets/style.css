@@ -1224,3 +1224,28 @@ section[id] {
   outline: none !important;
   box-shadow: none !important;
 }
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #111827 !important;
+    padding-top: 0;
+  }
+
+  .site-header {
+    display: none !important;
+  }
+
+  .section,
+  .hero-section,
+  .article-hero,
+  .article-shell {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .article-hero {
+    padding-top: 0;
+  }
+}
