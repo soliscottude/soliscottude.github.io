@@ -102,3 +102,25 @@ if (navToggle && navLinksContainer) {
     navLinksContainer.classList.toggle("nav-open");
   });
 }
+
+const siteHeader = document.querySelector(".site-header");
+let lastScrollY = window.scrollY;
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!siteHeader) return;
+
+    const currentScrollY = window.scrollY;
+    const isMenuOpen = navLinksContainer?.classList.contains("nav-open");
+
+    if (currentScrollY <= 20 || currentScrollY < lastScrollY || isMenuOpen) {
+      siteHeader.classList.remove("header-hidden");
+    } else if (currentScrollY > lastScrollY && currentScrollY > 90) {
+      siteHeader.classList.add("header-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  },
+  { passive: true }
+);
